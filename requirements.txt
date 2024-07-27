@@ -6,3 +6,7 @@ passlib
 joblib
 scikit-learn
 pandas
+seaborn
+matplotlib
+warnings
+numpy
