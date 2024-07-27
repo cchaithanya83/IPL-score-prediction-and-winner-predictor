@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        .nav-bar {
+            margin-bottom: 20px;
+        }
+
+        .nav-title {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-buttons a {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light nav-bar">
+        <div class="nav-title">
+            <h2 class="navbar-brand">IPL Prediction App</h2>
+        </div>
+        <div class="nav-buttons ml-auto">
+            <a href="/" class="btn btn-secondary">Login</a>
+            <a href="/about" class="btn btn-secondary">About</a>
+            <a href="/predict" class="btn btn-secondary">Back</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="text-center">Prediction Results</h1>
+        <table class="table table-bordered mt-3">
+            <thead class="thead-light">
+                <tr>
+                    <th>Prediction Type</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Predicted Score</td>
+                    <td>{{ predictions['avg_run']}}</td>
+                </tr>
+                <tr>
+                    <td>Predicted Winner</td>
+                    <td>{{ predictions['Random_Forest_Classifier'] }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="d-flex justify-content-center">
+            <a href="/predict" class="btn btn-primary mt-3">Go Back</a>
+        </div>
+    </div>
+</body>
+
+</html>

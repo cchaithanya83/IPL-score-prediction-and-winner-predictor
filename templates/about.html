@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        h1,
+        h2 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">About This Application</h1>
+        <p>Welcome to the IPL Score and Win Prediction Application. This application is designed to predict the score
+            and match outcomes of IPL cricket matches based on various parameters such as teams, venue, current runs,
+            current overs, and current wickets.</p>
+        <p>The application is built using FastAPI, a modern web framework for building APIs with Python 3.7+ based on
+            standard Python type hints. It includes the following features:</p>
+        <ul>
+            <li>User registration and authentication using OAuth2 and JWT tokens.</li>
+            <li>Prediction form where users can input match details and get predictions using pre-trained machine
+                learning models.</li>
+            <li>Three types of predictions: Linear Regression, Random Forest Regressor, and Random Forest Classifier.
+            </li>
+            <li>Responsive design with Bootstrap for a smooth user experience.</li>
+        </ul>
+        <h2>Technologies Used</h2>
+        <ul>
+            <li>FastAPI</li>
+            <li>SQLAlchemy</li>
+            <li>Jinja2 Templates</li>
+            <li>Bootstrap 4</li>
+            <li>Machine Learning models with scikit-learn</li>
+        </ul>
+        <h2>How to Use</h2>
+        <p>To use the application, follow these steps:</p>
+        <ol>
+            <li>Register a new account on the registration page.</li>
+            <li>Login with your credentials on the login page.</li>
+            <li>Navigate to the prediction form and fill in the match details.</li>
+            <li>Submit the form to get predictions for the match.</li>
+        </ol>
+    </div>
+</body>
+
+</html>

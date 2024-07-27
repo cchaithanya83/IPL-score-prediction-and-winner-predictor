@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e9ecef;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 40px;
+            max-width: 800px;
+        }
+
+        .navbar {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        .navbar-brand {
+            color: #ffffff;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+
+        .nav-buttons a {
+            color: #ffffff;
+            margin-left: 10px;
+        }
+
+        .nav-buttons a:hover {
+            text-decoration: underline;
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .form-control,
+        .form-select {
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">IPL Prediction App</a>
+        <div class="nav-buttons ml-auto">
+            <a href="/" class="btn btn-secondary">Login</a>
+            <a href="/about" class="btn btn-secondary">About</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h2 class="text-center mb-4">IPL Score and Win Prediction</h2>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="team1" class="form-label">Team 1</label>
+                <select class="form-select" id="team1" name="team1" required>
+                    <option value="" selected>Select Team 1</option>
+                    <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                    <option value="Chennai Super Kings">Chennai Super Kings</option>
+                    <option value="Kings XI Punjab">Kings XI Punjab</option>
+                    <option value="Delhi Daredevils">Delhi Daredevils</option>
+                    <option value="Mumbai Indians">Mumbai Indians</option>
+                    <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                    <option value="Rajasthan Royals">Rajasthan Royals</option>
+                    <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                    <option value="Gujarat Lions">Gujarat Lions</option>
+                    <option value="Rising Pune Supergiants">Rising Pune Supergiants</option>
+                    <option value="Rising Pune Supergiant">Rising Pune Supergiant</option>
+                    <option value="Delhi Capitals">Delhi Capitals</option>
+                    <option value="Punjab Kings">Punjab Kings</option>
+                    <option value="Lucknow Super Giants">Lucknow Super Giants</option>
+                    <option value="Gujarat Titans">Gujarat Titans</option>
+                    <option value="Royal Challengers Bengaluru">Royal Challengers Bengaluru</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="team2" class="form-label">Team 2</label>
+                <select class="form-select" id="team2" name="team2" required>
+                    <option value="" selected>Select Team 2</option>
+                    <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                    <option value="Chennai Super Kings">Chennai Super Kings</option>
+                    <option value="Kings XI Punjab">Kings XI Punjab</option>
+                    <option value="Delhi Daredevils">Delhi Daredevils</option>
+                    <option value="Mumbai Indians">Mumbai Indians</option>
+                    <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                    <option value="Rajasthan Royals">Rajasthan Royals</option>
+                    <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                    <option value="Gujarat Lions">Gujarat Lions</option>
+                    <option value="Rising Pune Supergiants">Rising Pune Supergiants</option>
+                    <option value="Rising Pune Supergiant">Rising Pune Supergiant</option>
+                    <option value="Delhi Capitals">Delhi Capitals</option>
+                    <option value="Punjab Kings">Punjab Kings</option>
+                    <option value="Lucknow Super Giants">Lucknow Super Giants</option>
+                    <option value="Gujarat Titans">Gujarat Titans</option>
+                    <option value="Royal Challengers Bengaluru">Royal Challengers Bengaluru</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="venue" class="form-label">Stadium</label>
+                <select class="form-select" id="venue" name="venue" required>
+                    <option value="" selected>Select Stadium</option>
+                    <option value="Eden Gardens">Eden Gardens</option>
+                    <option value="MA Chidambaram Stadium, Chepauk">MA Chidambaram Stadium, Chepauk</option>
+                    <option value="Maharashtra Cricket Association Stadium">Maharashtra Cricket Association Stadium
+                    </option>
+                    <option value="Feroz Shah Kotla">Feroz Shah Kotla</option>
+                    <option value="Wankhede Stadium">Wankhede Stadium</option>
+                    <option value="M Chinnaswamy Stadium">M Chinnaswamy Stadium</option>
+                    <option value="Sardar Patel Stadium, Motera">Sardar Patel Stadium, Motera</option>
+                    <option value="Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium">Dr. Y.S. Rajasekhara Reddy
+                        ACA-VDCA Cricket Stadium</option>
+                    <option value="Punjab Cricket Association Stadium, Mohali">Punjab Cricket Association Stadium,
+                        Mohali</option>
+                    <option value="Rajiv Gandhi International Stadium, Uppal">Rajiv Gandhi International Stadium, Uppal
+                    </option>
+                    <option value="Brabourne Stadium">Brabourne Stadium</option>
+                    <option value="Shaheed Veer Narayan Singh International Stadium">Shaheed Veer Narayan Singh
+                        International Stadium</option>
+                    <option value="JSCA International Stadium Complex">JSCA International Stadium Complex</option>
+                    <option value="Punjab Cricket Association IS Bindra Stadium, Mohali">Punjab Cricket Association IS
+                        Bindra Stadium, Mohali</option>
+                    <option value="Saurashtra Cricket Association Stadium">Saurashtra Cricket Association Stadium
+                    </option>
+                    <option value="Green Park">Green Park</option>
+                    <option value="Holkar Cricket Stadium">Holkar Cricket Stadium</option>
+                    <option value="M.Chinnaswamy Stadium">M.Chinnaswamy Stadium</option>
+                    <option value="Punjab Cricket Association IS Bindra Stadium">Punjab Cricket Association IS Bindra
+                        Stadium</option>
+                    <option value="Rajiv Gandhi International Stadium">Rajiv Gandhi International Stadium</option>
+                    <option value="MA Chidambaram Stadium">MA Chidambaram Stadium</option>
+                    <option value="Sawai Mansingh Stadium">Sawai Mansingh Stadium</option>
+                    <option value="Arun Jaitley Stadium">Arun Jaitley Stadium</option>
+                    <option value="MA Chidambaram Stadium, Chepauk, Chennai">MA Chidambaram Stadium, Chepauk, Chennai
+                    </option>
+                    <option value="Wankhede Stadium, Mumbai">Wankhede Stadium, Mumbai</option>
+                    <option value="Narendra Modi Stadium, Ahmedabad">Narendra Modi Stadium, Ahmedabad</option>
+                    <option value="Arun Jaitley Stadium, Delhi">Arun Jaitley Stadium, Delhi</option>
+                    <option value="Dubai International Cricket Stadium">Dubai International Cricket Stadium</option>
+                    <option value="Zayed Cricket Stadium, Abu Dhabi">Zayed Cricket Stadium, Abu Dhabi</option>
+                    <option value="Sharjah Cricket Stadium">Sharjah Cricket Stadium</option>
+                    <option value="Brabourne Stadium, Mumbai">Brabourne Stadium, Mumbai</option>
+                    <option value="Dr DY Patil Sports Academy, Mumbai">Dr DY Patil Sports Academy, Mumbai</option>
+                    <option value="Maharashtra Cricket Association Stadium, Pune">Maharashtra Cricket Association
+                        Stadium, Pune</option>
+                    <option value="Eden Gardens, Kolkata">Eden Gardens, Kolkata</option>
+                    <option value="Punjab Cricket Association IS Bindra Stadium, Mohali, Chandigarh">Punjab Cricket
+                        Association IS Bindra Stadium, Mohali, Chandigarh</option>
+                    <option value="Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow">Bharat Ratna
+                        Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="cumulative_runs" class="form-label">Current Runs</label>
+                <input type="number" class="form-control" id="cumulative_runs" name="cumulative_runs" min="0" max="400"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="over" class="form-label">Current Over</label>
+                <input type="number" class="form-control" id="over" name="over" min="0" max="20" step="1" required>
+            </div>
+
+
+            <div class="form-group">
+                <label for="current_wickets" class="form-label">Current Wickets</label>
+                <input type="number" class="form-control" id="current_wickets" name="current_wickets" min="0" max="10"
+                    required>
+            </div>
+
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary">Predict</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
