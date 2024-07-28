@@ -1,12 +1,10 @@
 fastapi
 uvicorn
 sqlalchemy
-sqlite
 passlib
 joblib
 scikit-learn
 pandas
 seaborn
 matplotlib
-warnings
 numpy
