@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Register</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -63,12 +63,12 @@
         </div>
         <div class="nav-buttons ml-auto">
             <a href="/about" class="btn btn-secondary">About</a>
-            <a href="/register" class="btn btn-secondary">Register</a>
+            <a href="/" class="btn btn-secondary">Login</a>
         </div>
     </nav>
     <div class="container">
-        <h1 class="text-center">Login</h1>
-        <form action="/token" method="post">
+        <h1 class="text-center">Register</h1>
+        <form action="/register" method="post">
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" class="form-control" id="username" name="username" required>
@@ -77,7 +77,7 @@
                 <label for="password">Password:</label>
                 <input type="password" class="form-control" id="password" name="password" required>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Login</button>
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
         </form>
         {% if message %}
         <div class="alert alert-info mt-3 text-center">{{ message }}</div>

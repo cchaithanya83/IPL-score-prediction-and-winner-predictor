@@ -8,7 +8,12 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #e9ecef;
+            font-family: Arial, sans-serif;
+            background-image: url('static/img/ipl.jpg');
+            background-size: auto;
+            background-position: center;
+            background-repeat: repeat;
         }
 
         .container {
@@ -19,14 +24,35 @@
             margin-top: 50px;
         }
 
+        .navbar {
+            /* background-color: #007bff; */
+            color: #ffffff;
+        }
+
         h1,
         h2 {
             margin-bottom: 20px;
+        }
+
+        .navbar-brand {
+            color: #ffffff;
+            font-size: xx-large;
         }
     </style>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light nav-bar">
+        <div class="nav-title">
+            <h2 class="navbar-brand">
+                <p style="color: #000000;">IPL Prediction App</p>
+            </h2>
+        </div>
+        <div class="nav-buttons ml-auto">
+            <a href="/about" class="btn btn-secondary">About</a>
+            <a href="/predict" class="btn btn-secondary">Home</a>
+        </div>
+    </nav>
     <div class="container">
         <h1 class="text-center">About This Application</h1>
         <p>Welcome to the IPL Score and Win Prediction Application. This application is designed to predict the score
@@ -36,8 +62,6 @@
             standard Python type hints. It includes the following features:</p>
         <ul>
             <li>User registration and authentication using OAuth2 and JWT tokens.</li>
-            <li>Prediction form where users can input match details and get predictions using pre-trained machine
-                learning models.</li>
             <li>Prediction using Linear Regression
             </li>
             <li>Responsive design with Bootstrap for a smooth user experience.</li>

@@ -12,29 +12,28 @@ import database as _database
 import auth as _auth
 
 app = FastAPI()
-
 _database.init_db()
-
 lr = joblib.load('first-innings-score-lr-model.pkl')
-
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 class OAuth2PasswordBearer:
     def __init__(self, tokenUrl: str):
         self.tokenUrl = tokenUrl
-
     def __call__(self, request: Request):
         token = request.cookies.get("access_token")
         if not token:
             raise HTTPException(status_code=401, detail="Not authenticated")
         return token
-
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 @app.get("/", response_class=HTMLResponse)
 async def login(request: Request):
     return templates.TemplateResponse("login.html", {"request": request})
+
+@app.get("/register", response_class=HTMLResponse)
+async def login(request: Request):
+    return templates.TemplateResponse("register.html", {"request": request})
 
 @app.post("/register", response_class=HTMLResponse)
 async def register(
